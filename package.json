@@ -5,8 +5,7 @@
   "description": "Personal Portfolio Website",
   "scripts": {
     "start": "react-scripts start",
-    "build:css": "tailwindcss -i ./src/style.css -o ./dist/output.css --minify",
-    "build": "npm run build:css && react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test"
   },
   "dependencies": {
@@ -16,9 +15,5 @@
     "react-dom": "^19.2.0",
     "recharts": "^3.4.1"
   },
-  "devDependencies": {
-    "autoprefixer": "^10.4.19",
-    "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.3"
-  }
+  "devDependencies": {}
 }
