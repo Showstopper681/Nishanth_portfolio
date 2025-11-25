@@ -64,6 +64,31 @@ export const PORTFOLIO_DATA: PortfolioData = {
         "Developed user interface modules for the portal.",
         "Worked with backend team for integration alignment."
       ]
+    },
+    {
+      name: "Revamped Company Website – AI-Enabled Corporate Site",
+      role: "Frontend Developer",
+      description: "A fully redesigned and modernized corporate website built to enhance brand identity, improve performance, and integrate an AI-powered chatbot for automated support. The website was built using Angular, PrimeNG, and PrimeFlex, focusing on responsiveness, performance, and clean UI/UX.",
+      responsibilities: [
+        "Built the entire frontend using Angular 18, PrimeNG 17, and PrimeFlex, ensuring highly responsive layouts.",
+        "Designed modern UI sections such as homepage, services, contact, products, and analytics screens.",
+        "Improved site performance and navigation flow for a better user experience.",
+        "Collaborated with backend teams to integrate necessary APIs.",
+        "Conducted testing, debugging, UI fixes, and final deployment preparation."
+      ]
+    },
+    {
+      name: "Worklog Dashboard – Employee Work Hours & Productivity System",
+      role: "Frontend Developer",
+      description: "A comprehensive internal productivity and work-tracking dashboard created to automate daily worklog entry, track work hours, manage teams, and streamline workflow processes. This system significantly reduced manual dependencies by automating the end-to-end worklog process.",
+      responsibilities: [
+        "Developed core modules like Log Work, Dashboard, Team Management, Workflow, and Task Creation screens.",
+        "Automated work-hour and productivity calculations that were earlier done manually through PowerBI.",
+        "Designed a clean, responsive UI using Angular, PrimeNG, and PrimeFlex.",
+        "Implemented REST API integrations for real-time updates of employee work details.",
+        "Built interactive charts, reports, and analytics for performance and productivity tracking.",
+        "Improved operational efficiency by removing manual data entry and reducing errors."
+      ]
     }
   ],
   skills: {
