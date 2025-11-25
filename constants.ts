@@ -4,7 +4,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
   personal_information: {
     full_name: "Nishanth Kalaimani",
     title: "Software Engineer",
-    bio: "A software professional with 3 years of experience as a Full Stack Developer, specializing in Angular and Spring Boot. Skilled in building scalable web applications, designing responsive UIs using PrimeNG, integrating backend REST APIs, and solving complex technical challenges. A collaborative team player with strong debugging and problem-solving skills.",
+    bio: "A Full-Stack Developer with 3 years of experience passionate about building scalable solutions. I leverage Angular to create dynamic user interfaces and Spring Boot to engineer robust backend services. I thrive on turning complex problems into efficient, maintainable, and user-focused applications.",
     contact: {
       phone: "+91 8825506805",
       email: "nishanthkalaimanioffcial@gmail.com",
@@ -71,6 +71,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
       "Angular",
       "PrimeNG",
       "JavaScript",
+      "TypeScript",
       "Bootstrap"
     ],
     backend: [

@@ -45,7 +45,12 @@ const Skills: React.FC = () => {
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-bold text-white mb-6 border-l-4 border-primary pl-4">Frontend & UI</h3>
-              {skills.frontend.map((skill, idx) => renderSkillBar(skill, 90 - (idx * 5)))} 
+              {skills.frontend.map((skill, idx) => {
+                 let percentage = 90 - (idx * 5);
+                 // Ensure TypeScript has the same percentage as JavaScript (approx 80%)
+                 if (skill === 'TypeScript') percentage = 80;
+                 return renderSkillBar(skill, percentage);
+              })} 
             </div>
             <div>
               <h3 className="text-2xl font-bold text-white mb-6 border-l-4 border-secondary pl-4">Backend & Core</h3>
@@ -56,7 +61,7 @@ const Skills: React.FC = () => {
           {/* Right: Visual Representation (Recharts) */}
           <div className="bg-card rounded-2xl p-8 border border-gray-800 shadow-2xl">
              <h3 className="text-xl font-bold text-white text-center mb-4">Skill Distribution</h3>
-             <div className="h-[300px] w-full">
+             <div className="w-full h-[300px]" style={{ width: '100%', height: 300, minHeight: 300 }}>
                <ResponsiveContainer width="100%" height="100%">
                  <PieChart>
                    <Pie

@@ -22,7 +22,7 @@ const Projects: React.FC<ProjectsProps> = ({ onProjectSelect }) => {
   };
 
   return (
-    <section id="projects" className="py-24 bg-card/30">
+    <section id="projects" className="pt-24 pb-8 bg-card/30">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16">
            <div>
@@ -36,10 +36,10 @@ const Projects: React.FC<ProjectsProps> = ({ onProjectSelect }) => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
            {projects.map((project, index) => (
-             <div key={index} className="group relative bg-[#1a1a1a] rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-600 transition-all duration-300">
+             <div key={index} className="group flex flex-col h-full relative bg-[#1a1a1a] rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-600 transition-all duration-300">
                 
                 {/* Image Placeholder Area */}
-                <div className="h-64 bg-gray-800 relative overflow-hidden">
+                <div className="h-64 bg-gray-800 relative overflow-hidden shrink-0">
                    <img 
                       src={getProjectImage(index)} 
                       alt={project.name}
@@ -54,7 +54,7 @@ const Projects: React.FC<ProjectsProps> = ({ onProjectSelect }) => {
                    </div>
                 </div>
 
-                <div className="p-8 relative">
+                <div className="p-8 relative flex flex-col flex-grow">
                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-primary transition-colors">
                      {project.name}
                    </h3>
@@ -68,7 +68,7 @@ const Projects: React.FC<ProjectsProps> = ({ onProjectSelect }) => {
                        {project.responsibilities.slice(0, 2).map((r, i) => (
                          <li key={i} className="flex items-start gap-2">
                            <span className="w-1.5 h-1.5 bg-secondary rounded-full mt-1.5 shrink-0"></span>
-                           {r}
+                           <span className="line-clamp-2">{r}</span>
                          </li>
                        ))}
                      </ul>
@@ -79,7 +79,7 @@ const Projects: React.FC<ProjectsProps> = ({ onProjectSelect }) => {
                       e.preventDefault();
                       onProjectSelect(project);
                     }} 
-                    className="w-full py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-lg font-medium transition-colors flex items-center justify-center gap-2 cursor-pointer"
+                    className="mt-auto w-full py-3 bg-gray-800 hover:bg-gray-700 hover:text-white text-white rounded-lg font-medium transition-colors flex items-center justify-center gap-2 cursor-pointer"
                    >
                       See Details <ArrowUpRight size={16} />
                    </button>

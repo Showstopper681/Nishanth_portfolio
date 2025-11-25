@@ -81,8 +81,6 @@ const GeminiChat: React.FC = () => {
               <div>
                 <h3 className="font-bold text-white">Nishanth's AI Agent</h3>
                 <div className="flex items-center gap-1">
-                  <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                  <span className="text-xs text-gray-400">Online</span>
                 </div>
               </div>
             </div>
@@ -140,9 +138,7 @@ const GeminiChat: React.FC = () => {
                  <Send size={14} />
                </button>
              </div>
-             <p className="text-[10px] text-center text-gray-600 mt-2">
-               Powered by Google Gemini AI
-             </p>
+            
           </div>
         </div>
       )}
