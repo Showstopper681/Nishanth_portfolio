@@ -16,28 +16,12 @@ Guidelines:
 5. Keep answers under 100 words unless detailed explanation is requested.
 `;
 
-let aiClient: GoogleGenAI | null = null;
-
-export const initializeGemini = () => {
-  if (!process.env.REACT_APP_API_KEY) {
-    console.warn("REACT_APP_API_KEY is missing from environment variables.");
-    return null;
-  }
-  if (!aiClient) {
-    aiClient = new GoogleGenAI({ apiKey: process.env.REACT_APP_API_KEY });
-  }
-  return aiClient;
-};
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 export const sendMessageToGemini = async (message: string, history: { role: string; parts: { text: string }[] }[]) => {
-  const client = initializeGemini();
-  if (!client) {
-    throw new Error("Gemini API Key not configured.");
-  }
-
   try {
     // We are using the 'gemini-2.5-flash' model for quick, responsive chat interactions.
-    const chat = client.chats.create({
+    const chat = ai.chats.create({
       model: 'gemini-2.5-flash',
       config: {
         systemInstruction: systemInstruction,
