@@ -19,12 +19,12 @@ Guidelines:
 let aiClient: GoogleGenAI | null = null;
 
 export const initializeGemini = () => {
-  if (!process.env.API_KEY) {
-    console.warn("API_KEY is missing from environment variables.");
+  if (!process.env.REACT_APP_API_KEY) {
+    console.warn("REACT_APP_API_KEY is missing from environment variables.");
     return null;
   }
   if (!aiClient) {
-    aiClient = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    aiClient = new GoogleGenAI({ apiKey: process.env.REACT_APP_API_KEY });
   }
   return aiClient;
 };

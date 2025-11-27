@@ -35,9 +35,16 @@ const Contact: React.FC = () => {
             // Reset success message after 5 seconds
             setTimeout(() => setIsSubmitted(false), 5000);
           },
-          (error) => {
-            console.error('FAILED...', error.text);
-            setError('Failed to send message. Please try again later.');
+          (err) => {
+            console.error('EmailJS Error:', err);
+            let errorMessage = `Failed to send message: ${err.text || err.message || 'Unknown error'}`;
+            
+            // Check for common ad-blocker/network error
+            if (errorMessage.includes("Failed to fetch")) {
+              errorMessage = "Network error: Please check your connection or disable ad-blockers.";
+            }
+            
+            setError(errorMessage);
             setIsLoading(false);
           },
         );
