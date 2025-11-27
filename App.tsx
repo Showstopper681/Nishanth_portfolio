@@ -9,7 +9,6 @@ import ProjectDetails from './components/ProjectDetails';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-// import GeminiChat from './components/GeminiChat';
 import { Project } from './types';
 
 const App: React.FC = () => {
@@ -43,7 +42,6 @@ const App: React.FC = () => {
       </main>
 
       <Footer />
-      {/* <GeminiChat /> */}
     </div>
   );
 };
